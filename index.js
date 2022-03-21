@@ -1,6 +1,7 @@
 import { Buffer } from 'buffer'
 import fetch from 'node-fetch'
 import * as process from 'process'
+import _ from 'lodash'
 
 const args = process.argv.slice(2)
 
@@ -68,7 +69,7 @@ function generateEverhourTimeEntries(timeEntryGroups) {
     return {
       time: sum(timeEntries.map(timeEntry => timeEntry.duration)),
       date: toISODate(new Date(firstTimeEntry.start)),
-      comment: timeEntries.map(timeEntry => timeEntry.description).join('\n')
+      comment: _.uniq(timeEntries.map(timeEntry => timeEntry.description)).join('\n')
     }
   })
 }
