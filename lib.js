@@ -131,6 +131,8 @@ export function parseArgs() {
     from, projectID,
   } = parseToggleArgs()
 
+  const args = process.argv.slice(2)
+
   const taskID = args[2]
   const taskIDRegExp = /ev:\d+/
   if (!taskIDRegExp.test(taskID)) {

@@ -1,4 +1,4 @@
-import { addTimeEntries, determineDateForEndOfYesterday, retrieveTimeEntries } from './lib.js'
+import { addTimeEntries, determineDateForEndOfYesterday, parseArgs, retrieveTimeEntries } from './lib.js'
 
 const { from, projectID, taskID } = parseArgs()
 const to = determineDateForEndOfYesterday()
