@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import fetch from 'node-fetch'
 import * as process from 'process'
+import { Buffer } from 'buffer'
 
 const togglApiKey = process.env.TOGGL_API_KEY
 const everhourApiKey = process.env.EVERHOUR_API_KEY
